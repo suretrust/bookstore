@@ -1,9 +1,12 @@
-const createBook = payload => {
-  type: 'CREATE_BOOK', payload;
-};
+const createBook = (title, category) => ({
+  type: 'CREATE_BOOK',
+  title,
+  category
+});
 
-const removeBook = payload => {
-  type: 'REMOVE_BOOK', payload;
-};
+const removeBook = id => ({
+  type: 'REMOVE_BOOK',
+  id
+});
 
 export { createBook, removeBook };
