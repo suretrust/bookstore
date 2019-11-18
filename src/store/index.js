@@ -1,6 +1,23 @@
-import { createStore } from 'redux'
-import {books} from '../containers/BooksList';
+import { createStore } from 'redux';
+import reducer from '../reducers';
 
-const store = createStore(reducer, {books});
+const getId = () => Math.round(Math.random() * 100);
+
+const initialState = {
+  books: [
+    {
+      id: getId(),
+      title: 'Bellom',
+      category: 'Biography'
+    },
+    {
+      id: getId(),
+      title: 'Suretrust',
+      category: 'History'
+    }
+  ]
+};
+
+const store = createStore(reducer, initialState);
 
 export default store;
