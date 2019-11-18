@@ -18,7 +18,7 @@ const BooksForm = () => {
         <select name="" id="">
           <option value="">Choose a category</option>
           {categories.map(category => (
-            <option value="{category}">{category}</option>
+            <option key={categories.indexOf(category)} value={category}>{category}</option>
           ))}
         </select>
         <input type="submit" value="Add a Book" />

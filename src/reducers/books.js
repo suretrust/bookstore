@@ -6,6 +6,7 @@ const reducer = (state, action) => {
       break;
 
     default:
-      return state;
+      break;
   }
+  return state;
 };
