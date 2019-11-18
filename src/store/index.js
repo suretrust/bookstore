@@ -1,7 +1,6 @@
 import { createStore } from 'redux';
 import reducer from '../reducers';
-
-const getId = () => Math.round(Math.random() * 100);
+import getId from '../utilities/getId'
 
 const initialState = {
   books: [
