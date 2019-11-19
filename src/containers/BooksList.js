@@ -10,14 +10,11 @@ const BooksList = ({ books }) => {
     <div>
       <h1>BooksList</h1>
       <table>
-        {books.map(book => (
-          <Book
-            key={book.id}
-            id={book.id}
-            title={book.title}
-            category={book.category}
-          />
-        ))}
+        <tbody>
+          {books.map(book => (
+            <Book key={book.id} book={book} />
+          ))}
+        </tbody>
       </table>
     </div>
   );
