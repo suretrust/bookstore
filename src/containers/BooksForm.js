@@ -1,4 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { createBook } from  '../actions/index';
+import store from '../store'
 
 class BooksForm extends React.Component {
   state = {
@@ -6,12 +9,24 @@ class BooksForm extends React.Component {
     category: ''
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value 
     })
   };
 
+  handleSubmit = e => {
+    e.preventDefault();
+    const { title, category } = this.state;
+    const { createBook } = this.props
+    createBook({ title, category })
+    console.log(store.getState())
+
+    this.setState({
+      title: '',
+      category: ''
+    });
+  };
   
 
   render() {
@@ -36,7 +51,7 @@ class BooksForm extends React.Component {
               <option key={categories.indexOf(category)} value={category}>{category}</option>
             ))}
           </select>
-          <input type="submit" value="Add a Book" />
+          <input type="submit" value="Add a Book" onClick={this.handleSubmit}/>
         </form>
         <p>title: {this.state.title} || category: {this.state.category}</p>
       </div>
@@ -44,4 +59,4 @@ class BooksForm extends React.Component {
   }
  };
 
-export default BooksForm;
+ export default connect(null, {createBook })(BooksForm); 
