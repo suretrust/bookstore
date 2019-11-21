@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
 
 class BooksForm extends React.Component {
@@ -30,6 +31,8 @@ class BooksForm extends React.Component {
   };
 
   render() {
+    const { title, category } = this.state;
+
     const categories = [
       'Action',
       'Biography',
@@ -46,13 +49,13 @@ class BooksForm extends React.Component {
           <input
             type="text"
             name="title"
-            value={this.state.title}
+            value={title}
             onChange={this.handleChange}
             placeholder="Book Title"
           />
           <select
             name="category"
-            value={this.state.category}
+            value={category}
             onChange={this.handleChange}
             id=""
           >
@@ -69,5 +72,9 @@ class BooksForm extends React.Component {
     );
   }
 }
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired
+};
 
 export default connect(null, { createBook })(BooksForm);
