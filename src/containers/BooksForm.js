@@ -1,36 +1,35 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createBook } from  '../actions/index';
-import store from '../store'
+import { createBook } from '../actions/index';
 
 class BooksForm extends React.Component {
   state = {
     title: '',
     category: ''
-  }
+  };
 
   handleChange = e => {
+    const { name, value } = e.target;
     this.setState({
-      [e.target.name]: e.target.value 
-    })
+      [name]: value
+    });
   };
 
   handleSubmit = e => {
     e.preventDefault();
     const { title, category } = this.state;
-    const { createBook } = this.props
-    createBook({ title, category })
-    console.log(store.getState())
+    const { createBook } = this.props;
 
-    this.setState({
-      title: '',
-      category: ''
-    });
+    if (title && category) {
+      createBook(title, category);
+      this.setState({
+        title: '',
+        category: ''
+      });
+    }
   };
-  
 
   render() {
-
     const categories = [
       'Action',
       'Biography',
@@ -40,23 +39,35 @@ class BooksForm extends React.Component {
       'Learning',
       'Sci-Fi'
     ];
-  
+
     return (
       <div>
-        <form onChange={this.handleChange}>
-          <input type="text" name='title' value={this.state.title} placeholder="Book Title"/>
-          <select name="category" value={this.state.category} id="" >
-            <option value="">Choose a category</option>
+        <form>
+          <input
+            type="text"
+            name="title"
+            value={this.state.title}
+            onChange={this.handleChange}
+            placeholder="Book Title"
+          />
+          <select
+            name="category"
+            value={this.state.category}
+            onChange={this.handleChange}
+            id=""
+          >
+            <option defaultValue="">Choose a category</option>
             {categories.map(category => (
-              <option key={categories.indexOf(category)} value={category}>{category}</option>
+              <option key={categories.indexOf(category)} value={category}>
+                {category}
+              </option>
             ))}
           </select>
-          <input type="submit" value="Add a Book" onClick={this.handleSubmit}/>
+          <input type="submit" onClick={this.handleSubmit} />
         </form>
-        <p>title: {this.state.title} || category: {this.state.category}</p>
       </div>
     );
   }
- };
+}
 
- export default connect(null, {createBook })(BooksForm); 
+export default connect(null, { createBook })(BooksForm);
