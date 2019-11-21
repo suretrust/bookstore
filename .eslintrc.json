@@ -32,6 +32,7 @@
             }
         ],
         "import/no-unresolved": "off",
+        "import/no-named-as-default": "off",
         "no-shadow": "off"
     }
 }
