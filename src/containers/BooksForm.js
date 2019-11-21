@@ -6,7 +6,7 @@ import { createBook } from '../actions/index';
 class BooksForm extends React.Component {
   state = {
     title: '',
-    category: ''
+    category: 'Action'
   };
 
   handleChange = e => {
@@ -25,7 +25,7 @@ class BooksForm extends React.Component {
       createBook(title, category);
       this.setState({
         title: '',
-        category: ''
+        category: 'Action'
       });
     }
   };
