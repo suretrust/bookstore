@@ -66,7 +66,7 @@ class BooksForm extends React.Component {
               </option>
             ))}
           </select>
-          <input type="submit" onClick={this.handleSubmit} />
+          <button type="submit" onClick={this.handleSubmit}>Add Book</button>
         </form>
       </div>
     );
