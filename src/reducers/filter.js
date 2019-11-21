@@ -1,11 +1,10 @@
-export default (state ='All', action) => {
-  switch(action.type){
+export default (state = 'All', action) => {
+  switch (action.type) {
     case 'CHANGE_FILTER':
-      return action.filter
+      return action.filter;
 
     default:
-    break;
+      break;
   }
-  return state
-
+  return state;
 };
