@@ -35,6 +35,9 @@
         "import/no-unresolved": "off",
         "import/no-named-as-default": "off",
         "import/no-named-as-default-member": "off",
-        "no-shadow": "off"
+        "no-shadow": "off",
+        "arrow-parens": "off",
+        "arrow-body-style": "off",
+        "comma-dangle": "off"
     }
 }

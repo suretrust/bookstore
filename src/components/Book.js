@@ -12,7 +12,9 @@ const Book = props => {
       <td>{book.title}</td>
       <td>{book.category}</td>
       <td>
-        <button type="button" onClick={handleRemoveBook}>x</button>
+        <button type="button" onClick={handleRemoveBook}>
+          x
+        </button>
       </td>
     </tr>
   );
