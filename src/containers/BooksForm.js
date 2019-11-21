@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
-import categories from '../utilities/categories'
+import categories from '../utilities/categories';
 
 class BooksForm extends React.Component {
   state = {
@@ -57,7 +57,9 @@ class BooksForm extends React.Component {
               </option>
             ))}
           </select>
-          <button type="submit" onClick={this.handleSubmit}>Add Book</button>
+          <button type="submit" onClick={this.handleSubmit}>
+            Add Book
+          </button>
         </form>
       </div>
     );
