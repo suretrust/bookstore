@@ -1,6 +1,6 @@
 import React from 'react';
-import CATEGORIES from '../utilities/categories';
 import PropTypes from 'prop-types';
+import CATEGORIES from '../utilities/categories';
 
 const CategoryFilter = ({ handleChange }) => {
   return (
