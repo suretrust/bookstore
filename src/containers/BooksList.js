@@ -44,7 +44,9 @@ BooksList.propTypes = {
       category: PropTypes.string.isRequired
     }).isRequired
   ).isRequired,
-  removeBook: PropTypes.func.isRequired
+  removeBook: PropTypes.func.isRequired,
+  changeFilter: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);

@@ -2,12 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
-import categories from '../utilities/categories';
+import CATEGORIES from '../utilities/categories';
 
 class BooksForm extends React.Component {
   state = {
     title: '',
-    category: 'Action'
+    category: CATEGORIES[0]
   };
 
   handleChange = e => {
@@ -26,7 +26,7 @@ class BooksForm extends React.Component {
       createBook(title, category);
       this.setState({
         title: '',
-        category: 'Action'
+        category: CATEGORIES[0]
       });
     }
   };
@@ -51,8 +51,8 @@ class BooksForm extends React.Component {
             id=""
           >
             <option defaultValue="">Choose a category</option>
-            {categories.map(category => (
-              <option key={categories.indexOf(category)} value={category}>
+            {CATEGORIES.map(category => (
+              <option key={category} value={category}>
                 {category}
               </option>
             ))}
