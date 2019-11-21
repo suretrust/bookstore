@@ -21,7 +21,13 @@ const BooksList = ({ books }) => {
 };
 
 BooksList.propTypes = {
-  books: PropTypes.arrayOf(PropTypes.object).isRequired
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired
+    }).isRequired
+  ).isRequired
 };
 
 export default connect(mapStateToProps)(BooksList);
