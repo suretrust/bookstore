@@ -1,16 +1,7 @@
 import React from 'react'
+import categories from '../utilities/categoriesgit'
 
 const CategoryFilter = () => {
-
-  const categories = [
-    'Action',
-    'Biography',
-    'History',
-    'Horror',
-    'Kids',
-    'Learning',
-    'Sci-Fi'
-  ];
 
   return (
     <div>

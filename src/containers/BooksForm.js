@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
+import categories from '../utilities/categories'
 
 class BooksForm extends React.Component {
   state = {
@@ -32,16 +33,6 @@ class BooksForm extends React.Component {
 
   render() {
     const { title, category } = this.state;
-
-    const categories = [
-      'Action',
-      'Biography',
-      'History',
-      'Horror',
-      'Kids',
-      'Learning',
-      'Sci-Fi'
-    ];
 
     return (
       <div>
