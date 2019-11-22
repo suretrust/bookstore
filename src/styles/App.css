@@ -26,6 +26,11 @@
   color: #121212;
 }
 
+.material-icons {
+  margin-left: 650px;
+  color: #0290ff;
+}
+
 nav {
   letter-spacing: 1.9px;
   display: flex;
