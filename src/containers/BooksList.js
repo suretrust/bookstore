@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import '../styles/BooksList.css';
 import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
@@ -22,16 +23,13 @@ const BooksList = ({ books, removeBook, filter, changeFilter }) => {
     filter === 'All' ? books : books.filter(book => book.category === filter);
 
   return (
-    <div>
-      <h1>BooksList</h1>
+    <div className="bookslist">
       <CategoryFilter handleChange={handleFilterChange} />
-      <table>
-        <tbody>
+      <div>
           {filteredBooks().map(book => (
             <Book key={book.id} book={book} removeBook={removeBook} />
           ))}
-        </tbody>
-      </table>
+      </div>
     </div>
   );
 };

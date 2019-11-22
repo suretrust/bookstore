@@ -6,7 +6,11 @@ import BooksList from '../containers/BooksList';
 function App() {
   return (
     <div className="App">
-      <h1>Book Store</h1>
+      <nav>
+        <li className="Bookstore-CMS">Bookstore CMS</li>
+        <li className="books">BOOKS</li>
+        <li className="categories">CATEGORIES</li>
+      </nav>
       <BooksList />
       <BooksForm />
     </div>
