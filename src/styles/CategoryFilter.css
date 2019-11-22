@@ -1,0 +1,32 @@
+.category-filter {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: Montserrat;
+    background-color: white;
+    border: solid 1px #e8e8e8;
+}
+
+.filter-by {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.select {
+    font-size: 20px;
+    width: 60%;
+    color: white;
+    background-color: #0290ff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    .select {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}

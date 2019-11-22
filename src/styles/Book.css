@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab&display=swap');
+
+.book {
+    height: 100px;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 4px;
+    border: solid 1px #e8e8e8;
+    background-color: #ffffff;
+}
+
+.category {
+    opacity: 0.5;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: bold;
+    color: #121212;
+}
+
+.title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: -0.2px;
+    color: #121212;
+}
+
+button {
+    padding-right: 10px;
+    background-color: white;
+    border: none;
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #4386bf;
+    cursor: pointer;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+button:active {
+    color: red;
+}
+
+.comment,
+.edit {
+    padding-left: 10px;
+}
+
+.edit {
+    border-right: none;
+}
+
+.comment, .remove {
+    border-right: 2px solid #e8e8e8;
+}
