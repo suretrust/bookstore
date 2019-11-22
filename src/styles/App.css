@@ -50,6 +50,20 @@ nav li {
   nav {
     padding: 20px;
   }
+
+  .material-icons {
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 1270px) {
+  nav {
+    padding: 20px;
+  }
+
+  .material-icons {
+    margin-left: 0px;
+  }
 }
 
 @media only screen and (max-width: 585px) {
@@ -59,7 +73,11 @@ nav li {
   }
 
   .Bookstore-CMS {
-    font-size: 19px;
+    font-size: 18px;
+  }
+
+  .material-icons {
+    margin-left: 50px;
   }
 }
 
@@ -70,6 +88,10 @@ nav li {
   }
 
   .Bookstore-CMS {
-    font-size: 20px;
+    font-size: 17px;
+  }
+
+  .material-icons {
+    margin-left: 0;
   }
 }
