@@ -14,7 +14,8 @@ const initialState = {
       title: 'Suretrust',
       category: 'History'
     }
-  ]
+  ], 
+  filter: 'All'
 };
 
 const store = createStore(reducer, initialState);
