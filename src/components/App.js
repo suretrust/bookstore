@@ -10,7 +10,7 @@ function App() {
         <li className="Bookstore-CMS">Bookstore CMS</li>
         <li className="books">BOOKS</li>
         <li className="categories">CATEGORIES</li>
-        <li><i class="material-icons">account_circle</i></li>
+        <li><i className="material-icons">account_circle</i></li>
       </nav>
       <BooksList />
       <BooksForm />
