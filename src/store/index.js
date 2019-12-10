@@ -6,12 +6,12 @@ const initialState = {
   books: [
     {
       id: getId(),
-      title: 'Bellom',
+      title: 'Bellom Sean',
       category: 'Biography'
     },
     {
       id: getId(),
-      title: 'Suretrust',
+      title: 'Suretrust Kayrode',
       category: 'History'
     }
   ], 

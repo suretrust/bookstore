@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
 import CATEGORIES from '../utilities/categories';
+import '../styles/BooksForm.css';
 
 class BooksForm extends React.Component {
   state = {
@@ -35,7 +36,8 @@ class BooksForm extends React.Component {
     const { title, category } = this.state;
 
     return (
-      <div>
+      <div className="books-form">
+        <h1 className="title2">ADD NEW BOOK</h1>
         <form>
           <input
             type="text"
@@ -45,6 +47,7 @@ class BooksForm extends React.Component {
             placeholder="Book Title"
           />
           <select
+            className="twenty-five"
             name="category"
             value={category}
             onChange={this.handleChange}
@@ -57,7 +60,10 @@ class BooksForm extends React.Component {
               </option>
             ))}
           </select>
-          <button type="submit" onClick={this.handleSubmit}>
+          <button
+            type="submit"
+            onClick={this.handleSubmit}
+          >
             Add Book
           </button>
         </form>

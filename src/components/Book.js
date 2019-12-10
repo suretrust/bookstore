@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/Book.css';
 
 const Book = props => {
   const { book, removeBook } = props;
@@ -7,16 +8,21 @@ const Book = props => {
   const handleRemoveBook = () => removeBook(book.id);
 
   return (
-    <tr>
-      <td>{book.id}</td>
-      <td>{book.title}</td>
-      <td>{book.category}</td>
-      <td>
-        <button type="button" onClick={handleRemoveBook}>
-          x
+    <div className="book">
+      <div className="category">{book.category}</div>
+      <div className="title">{book.title}</div>
+      <div>
+        <button type="button" onClick={handleRemoveBook} className="remove">
+          Remove
         </button>
-      </td>
-    </tr>
+        <button type="button" className="comment">
+          Comment
+        </button>
+        <button type="button" className="edit">
+          Edit
+        </button>
+      </div>
+    </div>
   );
 };
 
