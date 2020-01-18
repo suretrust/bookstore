@@ -25,17 +25,20 @@
 ```sh
 npm install
 ```
+### Usage
+#### Clone the repository to your local machine
+`git clone https://github.com/suretrust/bookstore.git`
 
-## Usage
+#### Change directory into the directory
+`cd bookstore`
 
-```sh
-npm run start
-```
+#### Install dependencies
+`npm install`
 
-## Run tests
+#### Start the app
+`npm start`
 
-```sh
-npm run test
+###### If it doesn't open automatically, open `http://localhost:3000` using your browser.
 ```
 
 ## Authors
