@@ -39,7 +39,6 @@ npm install
 `npm start`
 
 ###### If it doesn't open automatically, open `http://localhost:3000` using your browser.
-```
 
 ## Authors
 
