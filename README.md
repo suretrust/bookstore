@@ -50,7 +50,7 @@ npm install
 
 * Twitter: [@suretrustng](https://twitter.com/suretrustng)
 * Github: [@suretrust](https://github.com/suretrust)
-
+* E-mail: [(Email)](mailto:saholadele@gmail.com)
 ## Show your support
 
 Give a ⭐️ if this project helped you!
